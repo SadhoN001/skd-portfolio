@@ -63,7 +63,7 @@ body {
 }
  
 /* Only opacity animate — zero layout shift */
-.typing span {
+.typing-name span {
   opacity: 0;
   display: inline-block;
   will-change: opacity;
@@ -75,22 +75,20 @@ body {
   to   { opacity: 1; }
 }
  
-.typing span:nth-child(1)  { animation-delay: 0s; }
-.typing span:nth-child(2)  { animation-delay: 0.15s; }
-.typing span:nth-child(3)  { animation-delay: 0.30s; }
-.typing span:nth-child(4)  { animation-delay: 0.45s; }
-.typing span:nth-child(5)  { animation-delay: 0.60s; }
-.typing span:nth-child(6)  { animation-delay: 0.75s; }
-.typing span:nth-child(7)  { animation-delay: 0.90s; }
-.typing span:nth-child(8)  { animation-delay: 1.05s; }
-.typing span:nth-child(9)  { animation-delay: 1.20s; }
-.typing span:nth-child(10) { animation-delay: 1.35s; }
-.typing span:nth-child(11) { animation-delay: 1.50s; }
-.typing span:nth-child(12) { animation-delay: 1.65s; }
-.typing span:nth-child(13) { animation-delay: 1.80s; }
-.typing span:nth-child(14) { animation-delay: 1.95s; }
-.typing span:nth-child(15) { animation-delay: 2.10s; }
-.typing span:nth-child(16) { animation-delay: 2.25s; }
+.typing-name span:nth-child(1)  { animation-delay: 0s; }
+.typing-name span:nth-child(2)  { animation-delay: 0.15s; }
+.typing-name span:nth-child(3)  { animation-delay: 0.30s; }
+.typing-name span:nth-child(4)  { animation-delay: 0.45s; }
+.typing-name span:nth-child(5)  { animation-delay: 0.60s; }
+.typing-name span:nth-child(6)  { animation-delay: 0.75s; }
+.typing-name span:nth-child(7)  { animation-delay: 0.90s; }
+.typing-name span:nth-child(8)  { animation-delay: 1.05s; }
+.typing-name span:nth-child(9)  { animation-delay: 1.20s; }
+.typing-name span:nth-child(10) { animation-delay: 1.35s; }
+.typing-name span:nth-child(11) { animation-delay: 1.50s; }
+.typing-name span:nth-child(12) { animation-delay: 1.65s; }
+.typing-name span:nth-child(13) { animation-delay: 1.80s; }
+.typing-name span:nth-child(14) { animation-delay: 1.95s; }
  
 .left p {
   font-size: 16px;
@@ -103,6 +101,7 @@ body {
 @media (min-width: 768px) {
   .left p {
     font-size: 17px;
+    width: 80%;
   }
 }
  
@@ -123,18 +122,17 @@ body {
 }
  
 .icon {
-  width: 40px;
-  height: 40px;
-  min-width: 40px;
+  width: 44px;
+  height: 44px;
   background-color: #00d1b2;
   border-radius: 50%;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.3s ease, background-color 0.3s ease;
   font-size: 20px;
   color: black;
   text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
   flex-shrink: 0;
 }
  
@@ -142,7 +140,6 @@ body {
   .icon {
     width: 50px;
     height: 50px;
-    min-width: 50px;
     font-size: 24px;
   }
 }
@@ -152,7 +149,7 @@ body {
   background-color: white;
   color: black;
 }
-
+ 
 
 /* ===== Right Section (Profile) ===== */
 .right {
